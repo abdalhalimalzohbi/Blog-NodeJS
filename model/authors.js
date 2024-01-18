@@ -6,12 +6,14 @@ const AuthorSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    email: {
-      type: String,
-      required: true,
-    },
+    
     description: {
       type: String,
+      
+    },
+    user: {
+      type: mongoose.Schema.ObjectId,
+      ref: "users",
       required: true,
     },
   },

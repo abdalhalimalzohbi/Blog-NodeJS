@@ -15,6 +15,7 @@ const users = new mongoose.Schema({
   email: {
     type: String,
     required: true,
+   // unique:true,
   },
 });
-export const Users = mongoose.model("users", users);
+export const UserModel = mongoose.model("users", users);
