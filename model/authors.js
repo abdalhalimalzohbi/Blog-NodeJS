@@ -6,15 +6,16 @@ const AuthorSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    
+
     description: {
       type: String,
-      
+    },
+    photo: {
+      type: String,
     },
     user: {
-      type: mongoose.Schema.ObjectId,
+      type: mongoose.Schema.Types.ObjectId,
       ref: "users",
-      required: true,
     },
   },
   { timestamps: true }

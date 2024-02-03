@@ -7,12 +7,10 @@ const comment = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "User", // This specifies that the 'user' field refers to the 'User' model
-    required: true,
   },
   blog: {
     type: mongoose.Schema.Types.ObjectId,
     ref: "blog", // This specifies that the 'user' field refers to the 'User' model
-    required: true,
   },
 });
 
