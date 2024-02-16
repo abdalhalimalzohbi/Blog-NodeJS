@@ -6,6 +6,7 @@ import { makeUserAuthor } from "../controllers/users.js";
 import { passwordValidation,userValidation } from "../utils//Validations/authValidators.js"
 
 const userRoute = express();
+
 userRoute.post("/",isAuthenticated,userRole(['admin','user','author']),passwordValidation,userValidation,createUser);
 userRoute.delete("/:id",isAuthenticated,userRole(['user','author']),deleteUser);
 userRoute.delete("Admin/:id",isAuthenticated,userRole(['admin']),adminDeleteUser);
